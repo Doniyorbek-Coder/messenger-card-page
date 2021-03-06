@@ -2,33 +2,25 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu4mxK.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url("fonts/roboto-v20-latin-regular.woff2") format("woff2"),
+    url("fonts/roboto-v20-latin-regular.woff") format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
-  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmEU9fBBc4.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url("fonts/roboto-v20-latin-500.woff2") format("woff2"),
+    url("fonts/roboto-v20-latin-500.woff") format("woff");
 }
+
 @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
-  src: url(https://fonts.gstatic.com/s/roboto/v20/KFOlCnqEu92Fr1MmWUlfBBc4.woff2)
-    format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
-    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
-    U+FEFF, U+FFFD;
+  src: url("fonts/roboto-v20-latin-700.woff2") format("woff2"),
+    url("fonts/roboto-v20-latin-700.woff") format("woff");
 }
-
 :root {
   --site-bg: #c3d4e2;
   --card-header-bg: #6a96d8;
@@ -37,7 +29,7 @@
   --disabled-message-bg: #ffc2c1;
   --input-send-color: #6a96d8;
   --card-after-color: #dddddd;
-  --messenger-time: #aaaaadd3;
+  --messenger-time: #aaaaad;
 }
 
 html {
@@ -59,7 +51,7 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -91,23 +83,21 @@ body {
   align-items: center;
   text-transform: uppercase;
   color: white;
-  font-size: 15px;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 26px;
-  padding-bottom: 26px;
+  font-size: 14px;
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 22px;
   letter-spacing: 1px;
 }
 
 .card-header-title::before {
   display: block;
   content: "";
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #fff;
-  font-size: 16px;
-  margin-right: 5px;
+  margin-right: 13px;
 }
 .card-header-close {
   background-image: url(img/close.svg);
@@ -120,8 +110,9 @@ body {
   opacity: 1;
 }
 
-.messenger-card-body {
-  padding: 15px;
+.messenger-list {
+  padding: 15.5px;
+  margin: 0;
 }
 
 .messenger-date {
@@ -130,6 +121,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  font-size: 11.5px;
 }
 
 .messenger-date::before,
@@ -142,11 +134,12 @@ body {
 }
 
 .messenger-text {
-  padding: 15px 10px;
+  padding: 11px 10px;
   margin-top: 8px;
-  font-weight: 500;
-  border-radius: 5px;
-  max-width: 80%;
+  font-weight: 700;
+  border-radius: 4px;
+  max-width: 75%;
+  line-height: 1.4;
 }
 
 .messenger-sender::before {
@@ -156,7 +149,7 @@ body {
   border-bottom: 12px solid transparent;
   border-right: 12px solid var(--sender-text-bg);
   position: absolute;
-  top: 23px;
+  top: 21px;
   left: -7px;
 }
 .messenger-receiver:nth-child(2)::before {
@@ -166,38 +159,40 @@ body {
   border-bottom: 12px solid transparent;
   border-left: 12px solid var(--receiver-text-bg);
   position: absolute;
-  top: 23px;
+  top: 21px;
   right: -7px;
 }
 
-.message-sender {
+.messenger-item {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-top: 16px;
   position: relative;
 }
-.message-receiver {
-  display: flex;
-  flex-direction: column;
+
+.sender {
+  align-items: flex-start;
+}
+.receiver {
   align-items: flex-end;
-  margin-top: 16px;
-  position: relative;
 }
 .messenger-time {
   color: var(--messenger-time);
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 12px;
 }
 .messenger-sender {
   background-color: var(--sender-text-bg);
 }
 .messenger-receiver {
   background-color: var(--receiver-text-bg);
+  border-top-left-radius: 0px;
 }
-.message-disabled {
+.disabled-message {
   background-color: var(--disabled-message-bg);
 }
 
-.card-footer {
+.messenger-card-footer {
   margin: 15px;
   margin-top: 0;
   padding-top: 15px;
@@ -207,14 +202,17 @@ body {
 }
 
 .messenger-input {
-  font-weight: 700;
+  font-weight: bolder;
+  font-size: 14px;
   border: none;
   outline: none;
+  width: 80%;
 }
-.messenger-send {
+.message-sender {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 14.4px;
+  letter-spacing: 1px;
   color: var(--input-send-color);
 }

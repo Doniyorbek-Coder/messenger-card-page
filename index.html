@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Loop 1 - Step 4</title>
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <main class="site-content">
@@ -20,40 +17,38 @@
               <h2 class="card-header-title">Mark Zuckerberg</h2>
               <div class="card-header-close"></div>
             </header>
-            <ul class="messenger-card-body cf">
+            <ul class="messenger-list">
               <div class="messenger-date">Today</div>
-              <li class="message-sender">
+              <li class="messenger-item sender">
                 <span class="messenger-time">10:53</span>
                 <div class="messenger-text messenger-sender">
                   Hi, Mark! I made a new design for Messenger App.
                 </div>
               </li>
-              <li class="message-receiver">
+              <li class="messenger-item receiver">
                 <span class="messenger-time">10:57</span>
                 <div class="messenger-text messenger-receiver">
-                  Yo, Send it to my assistant and we'll review it during the
+                  Yo! Send it to my assistant and we'll review it during the
                   year.
                 </div>
               </li>
-              <li class="message-sender">
+              <li class="messenger-item sender">
                 <span class="messenger-time">11:03</span>
                 <div class="messenger-text messenger-sender">But Mark...</div>
               </li>
-              <li class="message-receiver">
-                <div class="messenger-text messenger-receiver message-disabled">
+              <li class="messenger-item receiver">
+                <div class="messenger-text messenger-receiver disabled-message">
                   You were blocked by the user.
                 </div>
               </li>
             </ul>
             <footer class="messenger-card-footer">
-              <div class="card-footer">
-                <input
-                  class="messenger-input"
-                  type="text"
-                  placeholder="Enter your message"
-                />
-                <a href="_blank" class="messenger-send">Send</a>
-              </div>
+              <input
+                class="messenger-input"
+                type="text"
+                placeholder="Enter your message"
+              />
+              <a href="" class="message-sender">Send</a>
             </footer>
           </div>
         </div>

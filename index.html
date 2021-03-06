@@ -13,8 +13,36 @@
   </head>
   <body>
     <main class="site-content">
-      <section class="messenger-card">
-        <div class="container"></div>
+      <section class="messenger">
+        <div class="container">
+          <div class="messenger-card">
+            <header class="messenger-card-header">
+              <h2 class="card-header-title">Mark Zuckerberg</h2>
+              <div class="card-header-close"></div>
+            </header>
+            <div class="messenger-card-body">
+              <div class="messenger-date">Today</div>
+              <div class="messenger-text messenger-sender">
+                Hi, Mark! I made a new design for Messenger App.
+              </div>
+              <div class="messenger-text messenger-receiver">
+                Yo, Send it to my assistant and we'll review it during the year.
+              </div>
+              <div class="messenger-text messenger-sender">But Mark...</div>
+              <div class="messenger-text messenger-receiver message-disabled">
+                You were blocked by the user.
+              </div>
+            </div>
+            <footer class="messenger-card-footer">
+              <input
+                class="messenger-input"
+                type="text"
+                placeholder="Enter your message"
+              />
+              <a href="_blank" class="messenger-send">Send</a>
+            </footer>
+          </div>
+        </div>
       </section>
     </main>
   </body>

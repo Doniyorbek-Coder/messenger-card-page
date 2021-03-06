@@ -115,6 +115,10 @@ body {
   height: 24px;
   cursor: pointer;
 }
+.card-header-close:hover > svg {
+  fill: #fff;
+}
+
 .messenger-card-body {
   padding: 15px;
 }

@@ -14,32 +14,46 @@
   <body>
     <main class="site-content">
       <section class="messenger">
-        <div class="container">
+        <div class="container messenger-container">
           <div class="messenger-card">
             <header class="messenger-card-header">
               <h2 class="card-header-title">Mark Zuckerberg</h2>
               <div class="card-header-close"></div>
             </header>
-            <div class="messenger-card-body">
+            <ul class="messenger-card-body cf">
               <div class="messenger-date">Today</div>
-              <div class="messenger-text messenger-sender">
-                Hi, Mark! I made a new design for Messenger App.
-              </div>
-              <div class="messenger-text messenger-receiver">
-                Yo, Send it to my assistant and we'll review it during the year.
-              </div>
-              <div class="messenger-text messenger-sender">But Mark...</div>
-              <div class="messenger-text messenger-receiver message-disabled">
-                You were blocked by the user.
-              </div>
-            </div>
+              <li class="message-sender">
+                <span class="messenger-time">10:53</span>
+                <div class="messenger-text messenger-sender">
+                  Hi, Mark! I made a new design for Messenger App.
+                </div>
+              </li>
+              <li class="message-receiver">
+                <span class="messenger-time">10:57</span>
+                <div class="messenger-text messenger-receiver">
+                  Yo, Send it to my assistant and we'll review it during the
+                  year.
+                </div>
+              </li>
+              <li class="message-sender">
+                <span class="messenger-time">11:03</span>
+                <div class="messenger-text messenger-sender">But Mark...</div>
+              </li>
+              <li class="message-receiver">
+                <div class="messenger-text messenger-receiver message-disabled">
+                  You were blocked by the user.
+                </div>
+              </li>
+            </ul>
             <footer class="messenger-card-footer">
-              <input
-                class="messenger-input"
-                type="text"
-                placeholder="Enter your message"
-              />
-              <a href="_blank" class="messenger-send">Send</a>
+              <div class="card-footer">
+                <input
+                  class="messenger-input"
+                  type="text"
+                  placeholder="Enter your message"
+                />
+                <a href="_blank" class="messenger-send">Send</a>
+              </div>
             </footer>
           </div>
         </div>

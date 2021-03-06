@@ -36,6 +36,8 @@
   --receiver-text-bg: #f2f2f2;
   --disabled-message-bg: #ffc2c1;
   --input-send-color: #6a96d8;
+  --card-after-color: #dddddd;
+  --messenger-time: #aaaaad;
 }
 
 html {
@@ -51,7 +53,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 13px;
   font-family: "Roboto", "Arial", sans-serif;
   background-color: var(--site-bg);
 }
@@ -62,4 +64,127 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.messenger-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+.messenger-card {
+  width: 400px;
+  background-color: #fff;
+  height: auto;
+}
+.messenger-card-header {
+  background-color: var(--card-header-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 23px;
+}
+.card-header-title {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  letter-spacing: 1px;
+}
+
+.card-header-title::before {
+  display: block;
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #fff;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.card-header-close {
+  background-image: url(img/close.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.messenger-card-body {
+  padding: 15px;
+}
+
+.messenger-date {
+  text-transform: uppercase;
+  color: var(--card-after-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.messenger-date::before,
+.messenger-date::after {
+  display: block;
+  height: 1px;
+  width: 150px;
+  content: "";
+  background-color: var(--card-after-color);
+}
+
+.messenger-text {
+  padding: 15px 10px;
+  margin-top: 10px;
+  font-weight: 500;
+  border-radius: 5px;
+  max-width: 80%;
+}
+.message-sender {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+.message-receiver {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 20px;
+}
+.messenger-time {
+  color: var(--messenger-time);
+}
+.messenger-sender {
+  background-color: var(--sender-text-bg);
+}
+.messenger-receiver {
+  background-color: var(--receiver-text-bg);
+}
+.message-disabled {
+  background-color: var(--disabled-message-bg);
+}
+
+.card-footer {
+  margin: 15px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px var(--card-after-color) solid;
+}
+
+.messenger-input {
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
+.messenger-send {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--input-send-color);
 }

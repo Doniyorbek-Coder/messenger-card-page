@@ -114,9 +114,10 @@ body {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  opacity: 0.6;
 }
-.card-header-close:hover > svg {
-  fill: #fff;
+.card-header-close:hover {
+  opacity: 1;
 }
 
 .messenger-card-body {

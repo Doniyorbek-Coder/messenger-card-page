@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -20,7 +20,7 @@
   font-weight: 700;
   src: url("fonts/roboto-v20-latin-700.woff2") format("woff2"),
     url("fonts/roboto-v20-latin-700.woff") format("woff");
-}
+} */
 :root {
   --site-bg: #c3d4e2;
   --card-header-bg: #6a96d8;
@@ -202,8 +202,9 @@ body {
 }
 
 .messenger-input {
-  font-weight: bolder;
+  font-weight: 500;
   font-size: 14px;
+  border: none;
   border: none;
   outline: none;
   width: 80%;

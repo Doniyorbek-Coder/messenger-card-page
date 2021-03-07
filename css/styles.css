@@ -100,7 +100,7 @@ body {
   margin-right: 13px;
 }
 .card-header-close {
-  background-image: url(img/close.svg);
+  background-image: url(../img/close.svg);
   width: 24px;
   height: 24px;
   cursor: pointer;
@@ -204,7 +204,6 @@ body {
 .messenger-input {
   font-weight: 500;
   font-size: 14px;
-  border: none;
   border: none;
   outline: none;
   width: 80%;

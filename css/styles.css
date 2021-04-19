@@ -152,6 +152,7 @@ body {
   position: relative;
 }
 .messenger-date {
+  margin-top: 0;
   text-transform: uppercase;
   color: var(--card-after-color);
   display: flex;
